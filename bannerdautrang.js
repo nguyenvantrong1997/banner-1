@@ -1,13 +1,13 @@
-//please contact me giaiphapthuonghieu.org@gmail.com
-//website http://giaiphapthuonghieu.vn or http://faceseo.vn
+//please contact me vietthanh.nguyentrong@gmail.com
+//website https://vietthanhmusic.vn/ or https://nhaccuvietthanh.com/
 
 (function($) {
-    $.fn.linhnguyen = function(options) {        
+    $.fn.nguyentrong = function(options) {        
         var defaults = {  
 	    	animation: 'fadeAndPop', //fade, fadeAndPop, none
 		    animationspeed: 300, //how fast animtions are
 		    closeonbackgroundclick: true, //if you click background will modal close?
-		    dismissmodalclass: 'close-linhnguyen-modal' //the class of a button or element that will close an open modal
+		    dismissmodalclass: 'close-nguyentrong-modal' //the class of a button or element that will close an open modal
     	}; 
 
         var options = $.extend({}, defaults, options); 
@@ -17,10 +17,10 @@
         		topMeasure  = parseInt(modal.css('top')),
 				topOffset = modal.height() + topMeasure,
           		locked = false,
-				modalBG = $('.linhnguyen-modal-bg');
+				modalBG = $('.nguyentrong-modal-bg');
 
 			if(modalBG.length == 0) {
-				modalBG = $('<div class="linhnguyen-modal-bg" />').insertAfter(modal);
+				modalBG = $('<div class="nguyentrong-modal-bg" />').insertAfter(modal);
 			}		    
 			modal.bind('linhnguyen:open', function () {
 			  modalBG.unbind('click.modalEvent');
@@ -95,7 +95,7 @@
 				});
 			}
 			$('body').keyup(function(e) {
-        		if(e.which===27){ modal.trigger('linhnguyen:close'); } // 27 is the keycode for the Escape key
+        		if(e.which===27){ modal.trigger('nguyentrong:close'); } // 27 is the keycode for the Escape key
 			});
 			
 			function unlockModal() { 
@@ -117,7 +117,7 @@ $(window).load(function() {
 			$(divpopup).attr('id', 'myModal');
 			$(divpopup).attr('class', 'linhnguyen-modal');
 			$( "body" ).append(divpopup);
-			$("#myModal").html("<a href='http://goo.gl/rKJWvA' target='_blank'><img src='http://faceseo.vn/bannerweb/hoc-seo-chuyen-sau.jpg' width='500px'/><br/>13 Kỹ thuật đẩy top vượt trội</a>. Học tại nhà CEO Faceseo. <h2><a class='close-linhnguyen-modal'>X</a></h2>");
-			$('#myModal').linhnguyen($('#myModal').data());
+			$("#myModal").html("<a href='http://goo.gl/rKJWvA' target='_blank'><img src='hhttps://4.bp.blogspot.com/-hYrY2F8Budw/Wjnp1-ZthYI/AAAAAAAAAok/9HhecDhu5sIoyZf8cIRcZU-mnCmqjFIkgCLcBGAs/s1600/11.gif' width='500px'/><br/>13 Kỹ thuật đẩy top vượt trội</a>. Học tại nhà CEO Faceseo. <h2><a class='close-nguyentrong-modal'>X</a></h2>");
+			$('#myModal').nguyentrong($('#myModal').data());
 		}
 });
